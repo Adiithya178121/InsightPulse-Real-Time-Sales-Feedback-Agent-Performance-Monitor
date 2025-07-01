@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sales Ops Dashboard</title>
+  <style>
+    body {
+   font-family: Arial, sans-serif;
+   text-align: center;
+    margin: 20px;
+    background-color: #f4f4f4;
+    }
+    input, select, button {
+      padding: 10px;
+      margin: 5px;
+      font-size: 16px;
+    }   
+  </style>
+</head>
+<body>
+  <h1>Sales Ops Dashboard</h1>
+  
+  <!-- Search & Filter -->
+  <div class="search-filter">
+    <input type="text" id="searchInput" placeholder="Search by agent name...">
+    <button onclick="searchFeedbacks()">Search</button>
+    <select id="filterSelect" onchange="filterFeedbacks()">
+      <option value="">All Ratings</option>
+      <option value="5">5 Stars</option>
+      <option value="4">4 Stars</option>
+      <option value="3">3 Stars</option>
+    </select>
+  </div>
+
+  <!-- Feedback List -->
+  <div id="feedbackList"></div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <button id="prevPage" onclick="prevPage()">Previous</button>
+    <span id="pageInfo">Page 1</span>
+    <button id="nextPage" onclick="nextPage()">Next</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
